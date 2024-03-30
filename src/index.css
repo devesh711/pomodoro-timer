@@ -38,7 +38,6 @@ h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
-
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -69,4 +68,12 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+
+.control-btn{
+    padding: .8em .9em;
+    margin: .5em;
+    border-radius: 50%;
+    transition: all .1s ease-in-out;
 }
