@@ -1,35 +1,34 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Break from './components/Break/Break'
+import Session from './components/Session/Session'
+import Controls from './components/Controls/Controls'
+import ThemeToggle from './components/ThemeToggle/ThemeToggle';
+import { useStateValue } from './contexts/stateProvider';
+import { useClockify } from './hooks/useClockify';
+import Todo from './components/Tasks/Todo'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [{timerLabel}] = useStateValue();
+  const clockifiedValue = useClockify();
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className='bg-[#ffffffae] h-[80vh] w-[150vh] flex justify-evenly rounded-lg'>
+      <div className='text-center flex flex-col items-center justify-center px-16'>
+      <h2 className=''>Pomodoro</h2>
+      <h3 id='timer-label' className=''>{timerLabel}</h3>
+      <h1 id='time-left' className=''>{clockifiedValue}</h1>
+      <Controls />
+      <div className="timer__controllers">
+        <Break />
+        <Session />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+      <ThemeToggle />
+    </div>
+    <Todo/>
+    </div>
+  );
 }
 
-export default App
+export default App 
+

@@ -1,0 +1,79 @@
+.todo-input {
+    outline: none;
+    background: none;
+    border: 1px solid #0e2946;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    width: 50%;
+    color: #fff;
+  }
+  .todo-input:hover,
+  .todo-input:active {
+    border: 1px solid #034363;
+  }
+  
+  .todo-input::placeholder {
+    color: #ffffff4d;
+  }
+
+  .edit-input {
+    outline: none;
+    background: none;
+    border: 1px solid #ffffff;
+    width: 50%;
+    color: #fff;
+  }
+  
+  
+  .edit-input::placeholder {
+    color: #ffffff4d;
+  }
+  
+
+  .todo-btn {
+    background: #0e2946;
+    color: #fff;
+    border: none;
+    padding: 0.55rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+  }
+  
+  .completed {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #84838389;
+    text-decoration: line-through;
+    color: #fff;
+    padding: 0.75rem 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    cursor: not-allowed;
+  }
+  
+  .Edit-btn {
+    background: #0e2946;
+    color: #fff;
+    border: none;
+    padding: 0.55rem;
+    cursor: pointer;
+    border-radius: 6px;
+  }
+  
+  .Todo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0e2946;
+    color: #fff;
+    padding: 0.75rem 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+  }
+  
+  .fa-trash {
+    margin-left: 0.75rem;
+  }

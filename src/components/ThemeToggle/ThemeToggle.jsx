@@ -1,4 +1,3 @@
-import './themeToggle.sass'
 import { useState, useEffect } from 'react';
 
 const ThemeToggle = () => {
