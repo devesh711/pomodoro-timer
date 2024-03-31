@@ -1,4 +1,5 @@
 export const initialState = {
+    projectName: 'React Pomodoro Timer',
     timerLabel: 'Session',
     busyIndicator: false,
     breakValue: 5,
@@ -8,6 +9,7 @@ export const initialState = {
 }
 
 export const actionTypes = {
+    SET_PROJECTNAME: 'SET_PROJECTNAME',
     RESET_TIMERS: 'RESET_TIMERS',
     START_TIMER: 'START_TIMER',
     TOGGLE_TIMER_LABEL: 'TOGGLE_TIMER_LABEL',
@@ -20,6 +22,12 @@ export const actionTypes = {
 
 const reducer = (state = initialState, action) => {
     switch (action.type) {
+        case actionTypes.SET_PROJECTNAME:
+            return {
+                ...state,
+                projectName: action.projectName,
+                timerLabel: action.timerLabel
+            };
         case actionTypes.INCREASE_BREAK_VALUE:
             return {
                 ...state,
