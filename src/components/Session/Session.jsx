@@ -27,7 +27,7 @@ const Session = () => {
 
     return (
         <div className='flex flex-col items-center'>
-            <span id='session-label' className='font-semibold'>Session Length</span>
+            <span id='session-label' className='font-semibold mb-4'>Session Length</span>
             <div className="flex justify-between items-center text-center">
                 <button
                     type='button'
@@ -38,7 +38,7 @@ const Session = () => {
                 >
                     <FontAwesomeIcon icon={faMinus}/>
                 </button>
-                <p id="session-length" className='text-2xL font-normal px-2 min-w-7 '>{sessionValue}</p>
+                <p id="session-length" className='text-2xl font-normal min-w-7 px-2'>{sessionValue}</p>
                 <button
                     type='button'
                     id='session-increment'

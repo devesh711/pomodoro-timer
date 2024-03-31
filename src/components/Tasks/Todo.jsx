@@ -23,6 +23,10 @@ function Todo() {
 
   function handleSubmit(e) {
     e.preventDefault();
+    if (!todo.trim()) { 
+      alert("Please enter a todo item.");
+      return; 
+    }
     const newTodo = {
       id: new Date().getTime(),
       text: todo,
@@ -58,7 +62,7 @@ function Todo() {
   }
   return (
     <div className="flex flex-col mt-14 align-top text-center">
-        <h1>Tasks</h1>
+        <h2 className="text-[#0e2946] text-2xl font-normal">Tasks</h2>
         <form className="TodoForm" onSubmit={handleSubmit}>
           <input
             className="todo-input"
@@ -66,11 +70,11 @@ function Todo() {
             onChange={(e) => setTodo(e.target.value)}
             value={todo}
           />
-          <button className="todo-btn" type="submit">
+          <button className="todo-btn rounded-none" type="submit">
             Add Todo
           </button>
         </form>
-        <div id="todo-list" className="mt-8">
+        <div id="todo-list" className="mt-8 flex flex-col max-h-72 overflow-y-scroll justify-center items-center">
         {todos.map((todo) => (
           <div key={todo.id} className={todo.completed ? "completed" : "Todo"}>
             <input

@@ -24,17 +24,23 @@
   }
   
   @media (min-width: 768px) {
-    .pomodoro-clock {
-      width: 768px;
-      margin: 0 auto;
-    }
-    .pomodoro-clock-header-name::before {
-      top: 50%;
-      left: -50%;
-      width: 200%;
-    }
+      body {
+        background-size: contain;
+      }
   }
+
+  @media (min-width: 435px) {
+    body {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: scroll
+    }
+}
 
   body{
     background-image: url(./assets/background.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll
+  
   }

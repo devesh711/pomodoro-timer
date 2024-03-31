@@ -77,13 +77,13 @@ const Controls = () => {
     })
 
     return (
-        <div className='flex justify-between items-center mb-8 z-[3]'>
+        <div className='flex justify-evenly items-center pt-6 mb-8 z-[3]'>
             <button type='button' id='start_stop' onClick={handlePlayPause}>
                 <FontAwesomeIcon
                     icon={!busyIndicator ? faPlay : faPause}
                 />
             </button>
-            <button type='button' className='p-6' id='reset' onClick={handleReset}>
+            <button type='button' className='' id='reset' onClick={handleReset}>
                 <FontAwesomeIcon
                     icon={faRedo}
                 />

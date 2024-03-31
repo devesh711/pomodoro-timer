@@ -25,22 +25,22 @@ const Break = () => {
 
     return (
         <div className='flex flex-col items-center'>
-            <span id='break-label' className='font-semibold'>Break Length</span>
+            <span id='break-label' className='font-semibold mb-4'>Break Length</span>
             <div className="flex text-center items-center justify-center">
                 <button
                     type='button'
                     id='break-decrement'
-                    className='break__controls--btn'
+                    className='control-btn'
                     onClick={handleDecrement}
                     disabled={busyIndicator || breakValue <= 1}
                 >
                     <FontAwesomeIcon icon={faMinus}/>
                 </button>
-                <p id="break-length" className='text-2xl font-normal min-w-7 px-2'>{breakValue}</p>
+                <p id="break-length" className='text-2xl font-normal min-w-7 px-2 '>{breakValue}</p>
                 <button
                     type='button'
                     id='break-increment'
-                    className=''
+                    className='control-btn'
                     onClick={handleIncrement}
                     disabled={busyIndicator || breakValue > 59}
                 >
